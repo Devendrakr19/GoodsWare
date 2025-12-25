@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   const sidebarData = [
     { key:1, title: "Dashboard", url: "/dashboard", icon: <RxDashboard /> },
-    { key:2, title: "Users", url: "", icon: <BiUser /> },
+    { key:2, title: "Users", url: "/user", icon: <BiUser /> },
     { key:3, title: "Products", url: "", icon: <MdProductionQuantityLimits /> },
     { key:4, title: "Reports", url: "", icon: <TbReportAnalytics /> }, 
   ];
