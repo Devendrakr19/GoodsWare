@@ -2,14 +2,23 @@ import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Layout from '../layout/Layout';
 import UserDashboard from '../pages/UserDashboard';
-import User from '../pages/User';
+import User from '../pages/User'; 
+import LoginLayout from '../layout/auth/LoginLayout';
+import Login from '../layout/auth/Login';
+import ForgotPassword from '../layout/auth/ForgotPassword';
+import ResetPassword from '../layout/auth/ResetPassword';
 
 const RouteConfig = () => {
   return (
     <>
       <Router>
         <Routes>
-            <Route path="/" element={<Layout/>}> 
+            <Route element={<LoginLayout/>}>
+                <Route path="/" element={<Login/>}/>
+                <Route path="/forgot-password" element={<ForgotPassword/>}/>
+                <Route path="/reset-password" element={<ResetPassword/>}/>
+            </Route>
+            <Route element={<Layout/>}> 
                 <Route path="/dashboard" element={<UserDashboard/>}/> 
                 <Route path="/user" element={<User/>}/> 
             </Route>

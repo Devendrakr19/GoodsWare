@@ -35,6 +35,18 @@ const AddUser = ({ open, onClose }) => {
           </div>
           <Grid container columnSpacing={2} rowSpacing={1.5}>
             <Grid size={6}>
+              <label htmlFor="StoreName">
+                Store Name <span className="text-[#e71616]">*</span>
+              </label>
+              <TextField
+                id="StoreName"
+                type="text"
+                size="small"
+                placeholder="John Store"
+                className="w-full"
+              />
+            </Grid>
+            <Grid size={6}>
               <label htmlFor="name">
                 Name <span className="text-[#e71616]">*</span>
               </label>
@@ -42,7 +54,7 @@ const AddUser = ({ open, onClose }) => {
                 id="name"
                 type="text"
                 size="small"
-                placeholder="Enater name"
+                placeholder="Enter name"
                 className="w-full"
               />
             </Grid>

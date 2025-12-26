@@ -21,14 +21,14 @@ const UserDashboard = () => {
     <> 
       <Grid container columnSpacing={2} rowSpacing={1.5}>
         {productCount.map((item, index)=>(
-          <Grid key={index} size={2.4} className="rounded px-5 py-4 bg-[#fdfdfdda]">
+          <Grid key={index} size={2.4} className="rounded px-5 py-3 bg-[#fdfdfdda]">
               <div className="flex items-center justify-between text-[20px]">
                 <span className='text-[40px]'>
                   {item?.icon}
                 </span>
                 {item?.title}
               </div>
-              <span className='flex justify-end text-[20px] font-semibold'>{item?.count}</span>
+              <span className='flex justify-end text-[24px] font-semibold'>{item?.count}</span>
           </Grid>
         ))}
         <Grid size={8}>
