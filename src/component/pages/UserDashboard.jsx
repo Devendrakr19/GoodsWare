@@ -6,6 +6,8 @@ import { MdStoreMallDirectory } from "react-icons/md";
 import { GiBoxUnpacking } from "react-icons/gi";
 import ProductOverview from '../layout/dashboard/user-dashboard/ProductOverview';
 import ProductSummary from '../layout/dashboard/user-dashboard/ProductSummary';
+import ProductAvailable from '../layout/dashboard/user-dashboard/ProductAvailable';
+import ProductTransaction from '../layout/dashboard/user-dashboard/ProductTransaction';
 const UserDashboard = () => {
 
   const productCount = [
@@ -35,8 +37,12 @@ const UserDashboard = () => {
         <Grid size={4.8}>
           <ProductSummary/>
         </Grid>
-
-
+        <Grid size={6}>
+          <ProductAvailable/>
+        </Grid>
+        <Grid size={6}>
+          <ProductTransaction/>
+        </Grid>
       </Grid>
     </>
   )

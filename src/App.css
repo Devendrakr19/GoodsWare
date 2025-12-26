@@ -3,7 +3,9 @@
 } 
 
 body{
-    background-color: #DBE2DC;
+  background-color: #DBE2DC;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .fill_btn{ 

@@ -18,8 +18,9 @@ const data = [
 
 const ProductOverview = () => {
 return (
-    <div className="bg-[#fdfdfdda] rounded p-2 -ml-6 overflow-hidden">
-    <ResponsiveContainer width="100%" height={250}>
+    <div className="bg-[#fdfdfdda] rounded px-2 pt-1 overflow-hidden">
+    <h1 className='text-[18px] font-semibold mb-1'>Product Overview</h1>
+    <ResponsiveContainer width="100%" height={232} className="-ml-4">
       <BarChart data={data}
        margin={{
         top: 5,
