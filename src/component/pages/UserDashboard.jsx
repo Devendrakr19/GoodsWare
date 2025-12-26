@@ -31,10 +31,10 @@ const UserDashboard = () => {
               <span className='flex justify-end text-[20px] font-semibold'>{item?.count}</span>
           </Grid>
         ))}
-        <Grid size={7.2}>
+        <Grid size={8}>
           <ProductOverview/>
         </Grid>
-        <Grid size={4.8}>
+        <Grid size={4}>
           <ProductSummary/>
         </Grid>
         <Grid size={6}>
