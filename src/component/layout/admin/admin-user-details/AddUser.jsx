@@ -12,7 +12,7 @@ const AddUser = ({ open, onClose }) => {
         BackdropProps={{
           sx: {
             backdropFilter: "blur(3px)",
-            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
           },
         }}
       >

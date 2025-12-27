@@ -42,6 +42,36 @@ body{
   border: 1px solid #00000000;
   transition: all 0.5s;
 }
+.delete_btn{  
+  background-color: #e4090952;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ec0707;
+  cursor: pointer;
+  font-weight: 500; 
+}
+
+.delete_btn:hover{
+  background: #ef0404;
+  color: #ffffff; 
+  transition: all 0.5s;
+}
+.add_btn{  
+  background-color: #33576558;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #335765;
+  cursor: pointer;
+  font-weight: 500; 
+}
+
+.add_btn:hover{
+  background: #335765;
+  color: #ffffff; 
+  transition: all 0.5s;
+}
 
 .hide_scrollbar{
   scrollbar-width: none; 

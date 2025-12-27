@@ -14,8 +14,9 @@ const Sidebar = () => {
   const sidebarData = [
     { key:1, title: "Dashboard", url: "/dashboard", icon: <RxDashboard /> },
     { key:2, title: "Users", url: "/user", icon: <BiUser /> },
-    { key:3, title: "Products", url: "", icon: <MdProductionQuantityLimits /> },
-    { key:4, title: "Reports", url: "", icon: <TbReportAnalytics /> }, 
+    { key:3, title: "Products", url: "/product", icon: <MdProductionQuantityLimits /> },
+    { key:4, title: "Purchase Item", url: "", icon: <TbReportAnalytics /> }, 
+    { key:4, title: "Sale item", url: "", icon: <TbReportAnalytics /> }, 
   ];
 
   const handleLogout = () => {
