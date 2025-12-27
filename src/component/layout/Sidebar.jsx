@@ -6,7 +6,7 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { MdOutlineLogout } from "react-icons/md";
 import { useSelector } from "react-redux";
-
+import { PiBoxArrowDown, PiBoxArrowUp  } from "react-icons/pi";
 const Sidebar = () => {
   const navigate = useNavigate();
   const isActiveSidebar = useSelector((state)=> state?.auth?.sidebarToggle)
@@ -15,8 +15,8 @@ const Sidebar = () => {
     { key:1, title: "Dashboard", url: "/dashboard", icon: <RxDashboard /> },
     { key:2, title: "Users", url: "/user", icon: <BiUser /> },
     { key:3, title: "Products", url: "/product", icon: <MdProductionQuantityLimits /> },
-    { key:4, title: "Purchase Item", url: "", icon: <TbReportAnalytics /> }, 
-    { key:4, title: "Sale item", url: "", icon: <TbReportAnalytics /> }, 
+    { key:4, title: "Purchase Items", url: "/purchase-item", icon: <PiBoxArrowDown /> }, 
+    { key:5, title: "Sale Items", url: "/sale-item", icon: <PiBoxArrowUp /> }, 
   ];
 
   const handleLogout = () => {

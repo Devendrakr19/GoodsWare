@@ -119,13 +119,15 @@ const AddProduct = ({ open, onClose }) => {
                         <MdDelete />
                       </button>
                     )}
-                    <button
-                      type="button"
-                      className="add_btn"
-                      onClick={handleAdd}
-                    >
-                      <IoMdAdd />
-                    </button>
+                    {addProduct.length - 1 === index && (
+                      <button
+                        type="button"
+                        className="add_btn"
+                        onClick={handleAdd}
+                      >
+                        <IoMdAdd />
+                      </button>
+                    )}
                   </div>
                 </Grid>
               </React.Fragment>
