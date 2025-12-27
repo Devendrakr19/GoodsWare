@@ -18,8 +18,7 @@ const AddItem = ({ open, onClose }) => {
       itemQuantity: "",
       size: "",
       color: "",
-      weight: "",
-      model: "",
+      weight: "", 
       expiryDate: "",
       waranty: "",
     },
@@ -35,8 +34,7 @@ const AddItem = ({ open, onClose }) => {
         itemQuantity: "",
         size: "",
         color: "",
-        weight: "",
-        model: "",
+        weight: "", 
         expiryDate: "",
         waranty: "",
       },
@@ -72,7 +70,7 @@ const AddItem = ({ open, onClose }) => {
           className="bg-[#fdfdfd] pt-3 px-6 pb-6 rounded-[20px]"
         >
           <div className="flex justify-between items-center mb-2">
-            <h1 className="text-[22px] font-semibold">Add Product</h1>
+            <h1 className="text-[22px] font-semibold">Add Item</h1>
             <IoMdClose
               className="text-[24px] cursor-pointer"
               onClick={onClose}
@@ -162,10 +160,22 @@ const AddItem = ({ open, onClose }) => {
                     </Grid>
                     <Grid size={3}>
                       <label htmlFor="unitPrice">
-                        Unit Price<span className="text-[#e71616]">*</span>
+                        Unit Cost Price<span className="text-[#e71616]">*</span>
                       </label>
                       <TextField
                         id="unitPrice"
+                        type="text"
+                        size="small"
+                        placeholder="1,000"
+                        className="w-full"
+                      />
+                    </Grid>
+                    <Grid size={3}>
+                      <label htmlFor="unitSellingPrice">
+                        Unit Selling Price<span className="text-[#e71616]">*</span>
+                      </label>
+                      <TextField
+                        id="unitSellingPrice"
                         type="text"
                         size="small"
                         placeholder="1,000"
@@ -214,7 +224,7 @@ const AddItem = ({ open, onClose }) => {
                         className="w-full"
                       />
                     </Grid>
-                    <Grid size={3}>
+                    {/* <Grid size={3}>
                       <label htmlFor="model">Model/Version</label>
                       <TextField
                         id="model"
@@ -223,14 +233,13 @@ const AddItem = ({ open, onClose }) => {
                         placeholder="1,00"
                         className="w-full"
                       />
-                    </Grid>
+                    </Grid> */}
                     <Grid size={3}>
                       <label htmlFor="expiryDate">Expiry Date</label>
                       <TextField
                         id="expiryDate"
                         type="date"
-                        size="small"
-                        placeholder="1,00"
+                        size="small" 
                         className="w-full"
                       />
                     </Grid>
@@ -241,6 +250,26 @@ const AddItem = ({ open, onClose }) => {
                         type="text"
                         size="small"
                         placeholder="1 years"
+                        className="w-full"
+                      />
+                    </Grid>
+                    <Grid size={3}>
+                      <label htmlFor="supplierName">Supplier Name</label>
+                      <TextField
+                        id="supplierName"
+                        type="text"
+                        size="small"
+                        placeholder="John"
+                        className="w-full"
+                      />
+                    </Grid>
+                    <Grid size={3}>
+                      <label htmlFor="supplierContact">Supplier Contact</label>
+                      <TextField
+                        id="supplierContact"
+                        type="text"
+                        size="small"
+                        placeholder="+91"
                         className="w-full"
                       />
                     </Grid>

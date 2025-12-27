@@ -23,9 +23,10 @@ const Product = () => {
 
   const columns = [
     { id: "Product", label: "Product", minWidth: 170 },
+    { id: "category", label: "Category", minWidth: 170 },
     { id: "TotalItem", label: "Available Item", minWidth: 170 },
-    { id: "StockIn", label: "Stock In", minWidth: 170 },
-    { id: "StockOut", label: "Stock Out", minWidth: 170 },
+    // { id: "StockIn", label: "Stock In", minWidth: 170 },
+    { id: "StockOut", label: "Item Sold", minWidth: 170 },
     // { id: "CostPrice", label: "Cost Price", minWidth: 170 },
     // { id: "Status", label: "Status", minWidth: 170 },
     { id: "Created", label: "Created", minWidth: 170 },
@@ -103,13 +104,13 @@ const Product = () => {
   return (
     <>
       <div className="flex justify-between items-center mb-2">
-        <div className="flex items-center bg-[#fdfdfd] rounded border-[1px] border-[#335765]">
+        <div className="flex items-center bg-[#fdfdfd] rounded border-[1px] border-[#3357657d]">
           <input
             type="text"
             placeholder="Search..."
             className="outline-none px-2 py-1.5 w-[300px]"
           />
-          <IoSearchOutline className="text-[20px] mr-1.5" />
+          <IoSearchOutline className="text-[20px] mr-1.5"/>
         </div>
         <button className="fill_btn" onClick={handleAddProduct}>
           Add Product

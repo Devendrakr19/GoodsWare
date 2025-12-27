@@ -157,7 +157,7 @@ const rows = [
   return (
     <>
       <div className="flex justify-between items-center mb-2"> 
-        <div className="flex items-center bg-[#fdfdfd] rounded border-[1px] border-[#335765]">
+        <div className="flex items-center bg-[#fdfdfd] rounded border-[1px] border-[#3357657d]">
           <input type="text" placeholder="Search..." className="outline-none px-2 py-1.5 w-[300px]"/>
           <IoSearchOutline className="text-[20px] mr-1.5"/>
         </div>     
