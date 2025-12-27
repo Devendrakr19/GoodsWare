@@ -1,6 +1,6 @@
 import React from "react";
 import { RxDashboard } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { TbReportAnalytics } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
@@ -8,14 +8,20 @@ import { MdOutlineLogout } from "react-icons/md";
 import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const isActiveSidebar = useSelector((state)=> state?.auth?.sidebarToggle)
 
   const sidebarData = [
     { key:1, title: "Dashboard", url: "/dashboard", icon: <RxDashboard /> },
     { key:2, title: "Users", url: "/user", icon: <BiUser /> },
-    { key:3, title: "Products", url: "", icon: <MdProductionQuantityLimits /> },
-    { key:4, title: "Reports", url: "", icon: <TbReportAnalytics /> }, 
+    { key:3, title: "Products", url: "/product", icon: <MdProductionQuantityLimits /> },
+    { key:4, title: "Purchase Item", url: "", icon: <TbReportAnalytics /> }, 
+    { key:4, title: "Sale item", url: "", icon: <TbReportAnalytics /> }, 
   ];
+
+  const handleLogout = () => {
+    navigate("/")
+  }
 
   return (
     <>
@@ -48,14 +54,13 @@ const Sidebar = () => {
               </NavLink>
             ))}
           </div>
-          <div className={`${isActiveSidebar ? "justify-center px-3 py-2.5" : "px-2 py-2"} hover:bg-[#335765] hover:text-[white] text-[18px] rounded flex items-center gap-[10px]`}>
+          <div onClick={handleLogout} className={`${isActiveSidebar ? "justify-center px-3 py-2.5" : "px-2 py-2"} hover:bg-[#335765] hover:text-[white] text-[18px] rounded flex items-center gap-[10px] cursor-pointer`}>
             {isActiveSidebar ? (
                 <MdOutlineLogout className="text-[22px]"/>                  
             ): (
                 <>
-                <MdOutlineLogout/>  
-
-                <span>Logout</span>
+                  <MdOutlineLogout/>
+                  <span>Logout</span>
                 </>
             )}
           </div>

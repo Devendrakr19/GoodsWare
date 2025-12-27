@@ -18,7 +18,7 @@ const Header = () => {
         <div className="bg-[#74a8a4] px-3 py-[17px] rounded flex justify-between items-center">
           <div className="flex items-center gap-3">
             <GiHamburgerMenu className="text-[22px] cursor-pointer hover:text-[white] transition delay-75" onClick={handleToggle}/>
-            Good morning, Devendra
+            <span className="text-[#000000]"> Sanjay Jaiswal Store</span>
           </div>
           <div className="">
             <FaRegCircleUser className="text-[24px] text-[#242323]"/>
