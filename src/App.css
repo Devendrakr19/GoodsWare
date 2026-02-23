@@ -8,6 +8,11 @@ body{
   scroll-behavior: smooth;
 }
 
+.textfield_bg_color{
+  background-color: #f3f6f3;
+  border-radius: 3px;
+}
+
 .fill_btn{ 
   border: 1px solid rgba(255, 255, 255, 0);
   background-color: #335765;
@@ -76,4 +81,8 @@ body{
 .hide_scrollbar{
   scrollbar-width: none; 
   -ms-overflow-style: none
+}
+
+.MuiOutlinedInput-root fieldset {
+  border-color: #5c5b5b;  
 }
