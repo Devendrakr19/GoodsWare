@@ -7,7 +7,7 @@ const AddProduct = ({ open, onClose }) => {
   const [addProduct, setAddProduct] = useState([
     {
       ProductName: "",
-      Category: "",
+      // Category: "",
       Description: "",
     },
   ]);
@@ -15,7 +15,8 @@ const AddProduct = ({ open, onClose }) => {
   const handleAdd = () => {
     setAddProduct((prev) => [
       ...prev,
-      { ProductName: "", Category: "", Description: "" },
+      { ProductName: "", Description: "" },
+      // { ProductName: "", Category: "", Description: "" },
     ]);
   };
 
@@ -41,10 +42,10 @@ const AddProduct = ({ open, onClose }) => {
         <Box
           sx={{
             position: "absolute",
-            top: "50%",
+            top: "50%", 
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "50%",
+            width: "40%",
           }}
           className="bg-[#fdfdfd] pt-3 px-6 pb-6 rounded-[20px]"
         >
@@ -64,7 +65,7 @@ const AddProduct = ({ open, onClose }) => {
               <React.Fragment key={index}>
                 <Grid size={11} className="mb-5">
                   <Grid container columnSpacing={2} rowSpacing={1.5}>
-                    <Grid size={6}>
+                    {/* <Grid size={6}>
                       <label htmlFor="ProductName">
                         Product Name <span className="text-[#e71616]">*</span>
                       </label>
@@ -75,10 +76,10 @@ const AddProduct = ({ open, onClose }) => {
                         placeholder="John Store"
                         className="w-full"
                       />
-                    </Grid>
-                    <Grid size={6}>
+                    </Grid> */}
+                    <Grid size={12}>
                       <label htmlFor="name">
-                        Category <span className="text-[#e71616]">*</span>
+                       Product Category <span className="text-[#e71616]">*</span>
                       </label>
                       <Autocomplete
                         disablePortal
@@ -100,7 +101,7 @@ const AddProduct = ({ open, onClose }) => {
                         multiline
                         type="text"
                         size="small"
-                        placeholder="Allen solly"
+                        placeholder="write..."
                         className="w-full"
                         minRows={2}
                         maxRows={2}

@@ -82,7 +82,7 @@ const AddItem = ({ open, onClose }) => {
           <Grid container columnSpacing={2} rowSpacing={1} className="mb-4">
             <Grid size={5.6}>
               <label htmlFor="productName">
-                Product Name <span className="text-[#e71616]">*</span>
+                Product Category <span className="text-[#e71616]">*</span>
               </label>
               <Autocomplete
                 disablePortal

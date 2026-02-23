@@ -22,8 +22,8 @@ const Product = () => {
   const [addProductPopup, setAddProductPopup] = useState(false);
 
   const columns = [
-    { id: "Product", label: "Product", minWidth: 170 },
-    { id: "category", label: "Category", minWidth: 170 },
+    { id: "Product", label: "Product Category", minWidth: 170 },
+    // { id: "category", label: "Category", minWidth: 170 },
     { id: "TotalItem", label: "Available Item", minWidth: 170 },
     // { id: "StockIn", label: "Stock In", minWidth: 170 },
     { id: "StockOut", label: "Item Sold", minWidth: 170 },
