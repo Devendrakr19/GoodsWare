@@ -16,8 +16,8 @@ const Sidebar = () => {
     // { key:7, title: "Suppliers", url: "/scan-item", icon: <PiBoxArrowUp /> }, 
     // { key:2, title: "Users", url: "/user", icon: <BiUser /> },
     { key:3, title: "Products", url: "/product", icon: <MdProductionQuantityLimits /> },
-    { key:4, title: "Purchase Items", url: "/purchase-item", icon: <PiBoxArrowDown /> }, 
-    { key:5, title: "Sale Items", url: "/sale-item", icon: <PiBoxArrowUp /> }, 
+    { key:4, title: "Purchase", url: "/purchase-item", icon: <PiBoxArrowDown /> }, 
+    { key:5, title: "Sale", url: "/sale-item", icon: <PiBoxArrowUp /> }, 
     // { key:6, title: "Scan Items", url: "/scan-item", icon: <PiBoxArrowUp /> }, 
     // { key:8, title: "Transctions", url: "/scan-item", icon: <PiBoxArrowUp /> }, 
   ];

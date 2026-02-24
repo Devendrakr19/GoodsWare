@@ -82,7 +82,7 @@ const AddItem = ({ open, onClose }) => {
           <Grid container columnSpacing={2} rowSpacing={1} className="mb-4">
             <Grid size={5.6}>
               <label htmlFor="productName">
-                Product Category <span className="text-[#e71616]">*</span>
+                Product <span className="text-[#e71616]">*</span>
               </label>
               <Autocomplete
                 disablePortal
@@ -95,7 +95,7 @@ const AddItem = ({ open, onClose }) => {
                   "Home Decoration",
                 ]}
                 sx={{ width: "100%" }}
-                renderInput={(params) => <TextField {...params} />}
+                renderInput={(params) => <TextField {...params} placeholder="Select"/>}
               />
             </Grid>
             <Grid size={5.7}>
@@ -106,7 +106,7 @@ const AddItem = ({ open, onClose }) => {
                 id="brandName"
                 type="text"
                 size="small"
-                placeholder="Allen solly"
+                placeholder="Apple" 
                 className="w-full"
               />
             </Grid>
@@ -151,7 +151,7 @@ const AddItem = ({ open, onClose }) => {
                         id="itemCode"
                         type="text"
                         size="small"
-                        placeholder="Allen shirt"
+                        placeholder="example16"
                         className="w-full"
                       />
                     </Grid>
@@ -163,7 +163,7 @@ const AddItem = ({ open, onClose }) => {
                         id="itemName"
                         type="text"
                         size="small"
-                        placeholder="Allen shirt"
+                        placeholder="Iphone 16"
                         className="w-full"
                       />
                     </Grid>
@@ -193,7 +193,7 @@ const AddItem = ({ open, onClose }) => {
                           "Quintal",
                         ]}
                         sx={{ width: "100%" }}
-                        renderInput={(params) => <TextField {...params} />}
+                        renderInput={(params) => <TextField {...params} placeholder="Select" />}
                       />
                     </Grid>
                     <Grid size={3}>
@@ -239,7 +239,7 @@ const AddItem = ({ open, onClose }) => {
                         id="size"
                         type="text"
                         size="small"
-                        placeholder="1,00"
+                        placeholder="sm"
                         className="w-full"
                       />
                     </Grid>
@@ -249,7 +249,7 @@ const AddItem = ({ open, onClose }) => {
                         id="color"
                         type="text"
                         size="small"
-                        placeholder="1,00"
+                        placeholder="black"
                         className="w-full"
                       />
                     </Grid>
@@ -259,7 +259,7 @@ const AddItem = ({ open, onClose }) => {
                         id="weight"
                         type="text"
                         size="small"
-                        placeholder="1,00"
+                        placeholder="200gm"
                         className="w-full"
                       />
                     </Grid> 

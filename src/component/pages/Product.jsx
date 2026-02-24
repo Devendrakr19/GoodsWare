@@ -22,7 +22,7 @@ const Product = () => {
   const [addProductPopup, setAddProductPopup] = useState(false);
 
   const columns = [
-    { id: "Product", label: "Product Category", minWidth: 170 },
+    { id: "Product", label: "Product", minWidth: 170 },
     // { id: "category", label: "Category", minWidth: 170 },
     { id: "TotalItem", label: "Available Item", minWidth: 170 },
     // { id: "StockIn", label: "Stock In", minWidth: 170 },
@@ -52,23 +52,15 @@ const Product = () => {
 
   const rows = [
     {
-      Product: "Laptop",
+      Product: "Electronic",
       TotalItem: "50",
       StockIn: "30",
       StockOut: "20",
       CostPrice: "50,000",
       Created: "2024-01-10",
-    },
+    }, 
     {
-      Product: "Mobile",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: 0,
-      CostPrice: "50,000",
-      Created: "2024-01-10",
-    },
-    {
-      Product: "Texttile",
+      Product: "TextTile",
       TotalItem: "50",
       StockIn: "30",
       StockOut: 0,
@@ -84,21 +76,13 @@ const Product = () => {
       Created: "2024-01-10",
     },
     {
-      Product: "Cement shop",
+      Product: "Cement",
       TotalItem: "50",
       StockIn: "30",
       StockOut: "20",
       CostPrice: "50,000",
       Created: "2024-01-10",
-    },
-    {
-      Product: "Laptop",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: 0,
-      CostPrice: "50,000",
-      Created: "2024-01-10",
-    },
+    }, 
   ];
 
   return (

@@ -79,7 +79,7 @@ const AddProduct = ({ open, onClose }) => {
                     </Grid> */}
                     <Grid size={12}>
                       <label htmlFor="name">
-                       Product Category <span className="text-[#e71616]">*</span>
+                       Product <span className="text-[#e71616]">*</span>
                       </label>
                       <Autocomplete
                         disablePortal
