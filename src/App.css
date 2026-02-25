@@ -1,11 +1,15 @@
 *{
-    box-sizing: border-box;
-} 
+  box-sizing: border-box;
+}  
 
 body{
   background-color: #DBE2DC;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
+}
+
+label {
+  color: #2D3436;
 }
 
 .textfield_bg_color{
@@ -14,8 +18,8 @@ body{
 }
 
 .fill_btn{ 
-  border: 1px solid rgba(255, 255, 255, 0);
-  background-color: #335765;
+  border: 1px solid rgba(255, 255, 255, 0); 
+  background-color: #009E9A;
   padding: 6px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -26,23 +30,23 @@ body{
 
 .fill_btn:hover{
   background: white;
-  color: #335765;
-  border: 1px solid #335765;
+  color: #007F7C;
+  border: 1px solid #007F7C; 
   transition: all 0.5s;
 }
 .border_btn{ 
-  border: 1px solid #335765;
+  border: 1px solid #007F7C;
   background-color: #ffffff;
   padding: 6px 15px;
   border-radius: 5px;
   font-size: 16px;
-  color: #335765;
+  color: #007F7C;
   cursor: pointer;
   font-weight: 500; 
 }
 
 .border_btn:hover{
-  background: #335765;
+  background: #007F7C; 
   color: #ffffff;
   border: 1px solid #00000000;
   transition: all 0.5s;
@@ -63,17 +67,17 @@ body{
   transition: all 0.5s;
 }
 .add_btn{  
-  background-color: #33576558;
+  background-color: #009e995b;
   padding: 8px 10px;
   border-radius: 5px;
   font-size: 16px;
-  color: #335765;
+  color: #009E9A;
   cursor: pointer;
   font-weight: 500; 
 }
 
 .add_btn:hover{
-  background: #335765;
+  background: #009E9A;
   color: #ffffff; 
   transition: all 0.5s;
 }
@@ -83,6 +87,6 @@ body{
   -ms-overflow-style: none
 }
 
-.MuiOutlinedInput-root fieldset {
-  border-color: #5c5b5b;  
+.MuiOutlinedInput-root fieldset { 
+  border-color: #B2BEC3;  
 }

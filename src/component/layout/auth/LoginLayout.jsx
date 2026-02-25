@@ -5,17 +5,14 @@ import { Outlet } from "react-router-dom";
 const LoginLayout = () => {
   return (
     <>
-      <Grid container className="bg-[#74a8a4] relative">
-        {Array(84)
+      <Grid container className="bg-[#00cec4] relative">
+        {Array(288)
           .fill()
           .map((item, index) => (
             <Grid
               key={index}
-              size={1}
-              className="h-[104.2px] border-[1px] border-[#00000014] hover:inset-shadow-white hover:bg-[#335765]"
-              sx={{
-                transition: "all 0.2s ease-in-out",
-              }}
+              size={0.5}
+              className="h-[60.7px] border-[1px] border-[#00000014] hover:inset-shadow-white hover:bg-[#ffffff]"
             ></Grid>
           ))}
         <Grid
@@ -29,7 +26,7 @@ const LoginLayout = () => {
             borderRadius: "5px",
           }}
         >
-            <Outlet/>
+          <Outlet />
         </Grid>
       </Grid>
     </>

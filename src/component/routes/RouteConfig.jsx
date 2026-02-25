@@ -9,8 +9,7 @@ import ForgotPassword from '../layout/auth/ForgotPassword';
 import ResetPassword from '../layout/auth/ResetPassword';
 import Product from '../pages/Product';
 import PurchaseItem from '../pages/PurchaseItem';
-import SaleItem from '../pages/SaleItem';
-import BillingItem from '../layout/sale-item/BillingItem';
+import SaleItem from '../pages/SaleItem'; 
 
 const RouteConfig = () => {
   return (
@@ -27,8 +26,7 @@ const RouteConfig = () => {
                 <Route path="/user" element={<User/>}/> 
                 <Route path="/product" element={<Product/>}/> 
                 <Route path="/purchase-item" element={<PurchaseItem/>}/> 
-                <Route path="/sale-item" element={<SaleItem/>}/>
-                <Route path="/sale-item/billing-item" element={<BillingItem/>}/>                  
+                <Route path="/sale-item" element={<SaleItem/>}/>                 
             </Route>
         </Routes>
       </Router>

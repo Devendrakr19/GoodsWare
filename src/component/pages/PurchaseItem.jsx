@@ -282,7 +282,7 @@ const PurchaseItem = () => {
               "& .MuiTableCell-stickyHeader": {
                 boxShadow: "none",
                 borderBottom: "none",
-                background: "#748d92",
+                background: "#009E9A",
                 color: "#fff",
                 fontSize: "15px",
                 fontWeight: "600",
@@ -316,7 +316,7 @@ const PurchaseItem = () => {
                       tabIndex={-1}
                       key={index}
                       className={`${
-                        index % 2 === 0 ? "bg-[#c7cfd3cf]" : "bg-[#e1e9eaeb]"
+                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F1F2F6]"
                       }`}
                       sx={{
                         "& .MuiTableCell-root": { padding: "14.4px 15px" },
@@ -336,14 +336,14 @@ const PurchaseItem = () => {
                                 <Tooltip
                                   title="View"
                                   arrow
-                                  className="cursor-pointer hover:text-[green]"
+                                  className="cursor-pointer text-[#198143]"
                                 >
                                   <LuEye onClick={handleViewItem}/>
                                 </Tooltip>
                                 <Tooltip
                                   title="Edit"
                                   arrow
-                                  className="cursor-pointer hover:text-[#0c8dc0]"
+                                  className="cursor-pointer text-[#0c8dc0]"
                                 >
                                   <MdOutlineModeEdit onClick={handleAddItem} />
                                 </Tooltip>
@@ -377,7 +377,7 @@ const PurchaseItem = () => {
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
-          sx={{ backgroundColor: "#adbfbd" }}
+          sx={{ backgroundColor: "#F1F2F6" }}
         />
       </Paper>
       <AddItem open={addItemPopup} onClose={handleCloseItem} />

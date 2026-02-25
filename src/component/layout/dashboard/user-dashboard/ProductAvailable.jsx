@@ -64,7 +64,7 @@ const ProductAvailable = () => {
               "& .MuiTableCell-stickyHeader": {
                 boxShadow: "none",
                 borderBottom: "none",
-                background: "#748d99",
+                background: "#009E9A",
                 color: "#fff",
                 fontSize: "15px",
                 fontWeight: "600",
@@ -95,7 +95,7 @@ const ProductAvailable = () => {
                     tabIndex={-1}
                     key={index}
                     className={`${
-                      index % 2 === 0 ? "bg-[#c7cfd3cf]" : "bg-[#e1e9eaeb]"
+                      index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F1F2F6]"
                     }`}
                     sx={{
                       "& .MuiTableCell-root": { padding: "10.5px 10px" },

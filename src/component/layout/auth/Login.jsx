@@ -9,7 +9,7 @@ const Login = () => {
   const validationSchema = Yup.object({
     email: Yup.string().required("Email is Required"),
     password: Yup.string().required("Password is Required"),
-  })
+  });
 
   const formik = useFormik({
     initialValues: {
@@ -22,12 +22,12 @@ const Login = () => {
       navigate("/dashboard");
     },
   });
-  
+
   const handleForgot = () => {
-    navigate("/forgot-password");    
-  }
-//  console.log("passs", formik.password)
-//  console.log("emmil", formik.email)
+    navigate("/forgot-password");
+  };
+  //  console.log("passs", formik.password)
+  //  console.log("emmil", formik.email)
   return (
     <>
       <form onSubmit={formik.handleSubmit} className="flex flex-col p-5">
@@ -67,7 +67,10 @@ const Login = () => {
           />
         </div>
         <div className="flex justify-end">
-          <span onClick={handleForgot} className="text-[13px] mt-1 hover:text-[#0862d8] cursor-pointer">
+          <span
+            onClick={handleForgot}
+            className="text-[13px] mt-1 hover:text-[#0862d8] cursor-pointer"
+          >
             Forgot password
           </span>
         </div>

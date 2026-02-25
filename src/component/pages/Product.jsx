@@ -22,7 +22,7 @@ const Product = () => {
   const [addProductPopup, setAddProductPopup] = useState(false);
 
   const columns = [
-    { id: "Product", label: "Product Category", minWidth: 170 },
+    { id: "Product", label: "Product", minWidth: 170 },
     // { id: "category", label: "Category", minWidth: 170 },
     { id: "TotalItem", label: "Available Item", minWidth: 170 },
     // { id: "StockIn", label: "Stock In", minWidth: 170 },
@@ -52,23 +52,15 @@ const Product = () => {
 
   const rows = [
     {
-      Product: "Laptop",
+      Product: "Electronic",
       TotalItem: "50",
       StockIn: "30",
       StockOut: "20",
       CostPrice: "50,000",
       Created: "2024-01-10",
-    },
+    }, 
     {
-      Product: "Mobile",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: 0,
-      CostPrice: "50,000",
-      Created: "2024-01-10",
-    },
-    {
-      Product: "Texttile",
+      Product: "TextTile",
       TotalItem: "50",
       StockIn: "30",
       StockOut: 0,
@@ -84,21 +76,13 @@ const Product = () => {
       Created: "2024-01-10",
     },
     {
-      Product: "Cement shop",
+      Product: "Cement",
       TotalItem: "50",
       StockIn: "30",
       StockOut: "20",
       CostPrice: "50,000",
       Created: "2024-01-10",
-    },
-    {
-      Product: "Laptop",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: 0,
-      CostPrice: "50,000",
-      Created: "2024-01-10",
-    },
+    }, 
   ];
 
   return (
@@ -128,7 +112,7 @@ const Product = () => {
               "& .MuiTableCell-stickyHeader": {
                 boxShadow: "none",
                 borderBottom: "none",
-                background: "#748d92",
+                background: "#009E9A",
                 color: "#fff",
                 fontSize: "15px",
                 fontWeight: "600",
@@ -161,7 +145,7 @@ const Product = () => {
                       tabIndex={-1}
                       key={index}
                       className={`${
-                        index % 2 === 0 ? "bg-[#c7cfd3cf]" : "bg-[#e1e9eaeb]"
+                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F1F2F6]"
                       }`}
                       sx={{
                         "& .MuiTableCell-root": { padding: "14.4px 15px" },
@@ -187,14 +171,14 @@ const Product = () => {
                                 <Tooltip
                                   title="Edit"
                                   arrow
-                                  className="cursor-pointer hover:text-[#0c8dc0]"
+                                  className="cursor-pointer text-[#0c8dc0]"
                                 >
                                   <MdOutlineModeEdit onClick={handleAddProduct} />
                                 </Tooltip>
                                 <Tooltip
                                   title="Delete"
                                   arrow
-                                  className="cursor-pointer hover:text-[#e61313]"
+                                  className="cursor-pointer text-[#e61313]"
                                 >
                                   <MdDeleteOutline />
                                 </Tooltip>
@@ -221,7 +205,7 @@ const Product = () => {
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
-          sx={{ backgroundColor: "#adbfbd" }}
+          sx={{ backgroundColor: "#F1F2F6" }}
         />
       </Paper>
       <AddProduct open={addProductPopup} onClose={handleCloseProduct}/>
