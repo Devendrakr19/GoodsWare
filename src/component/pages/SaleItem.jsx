@@ -120,7 +120,7 @@ const SaleItem = () => {
                 "& .MuiTableCell-stickyHeader": {
                   boxShadow: "none",
                   borderBottom: "none",
-                  background: "#748d92",
+                  background: "#009E9A",
                   color: "#fff",
                   fontSize: "15px",
                   fontWeight: "600",
@@ -178,26 +178,26 @@ const SaleItem = () => {
                             className="truncate"
                           >
                             {column.id === "Action" ? (
-                              <div className="flex items-center gap-0.5 text-[20px]">
+                              <div className="flex items-center gap-1">
                                 {index === 0 && (
-                                  <Tooltip
+                                  <button
                                     title="Add Item"
                                     arrow
-                                    className="cursor-pointer hover:text-[green]"
+                                    className="add_btn"
                                   >
                                     <IoMdAdd onClick={handleAddItem} />
-                                  </Tooltip>
+                                  </button>
                                 )}
                                 {billingItem.length > 1 && (
-                                  <Tooltip
+                                  <button
                                     title="Delete"
                                     arrow
-                                    className="cursor-pointer hover:text-[#e61313]"
+                                    className="delete_btn"
                                   >
                                     <MdDeleteOutline
                                       onClick={() => handleDeleteItem(index)}
                                     />
-                                  </Tooltip>
+                                  </button>
                                 )}
                               </div>
                             ) : column.id === "itemName" ? (
@@ -292,7 +292,7 @@ const SaleItem = () => {
       </div>
 
       <div className="flex justify-between gap-3.5 mt-[15px]">
-        <div className="w-[65%] bg-[white] rounded px-4 py-4">
+        <div className="w-[65%] bg-[white] rounded px-4 pb-4 pt-3">
           <CustomerDetail />
         </div>
         <div className="grow">
