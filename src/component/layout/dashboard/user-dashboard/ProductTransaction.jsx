@@ -55,12 +55,30 @@ const ProductTransaction = () => {
       Status: "5",
       Created: "2024-01-10",
     },
+    {
+      BuyerName:"Devendra Kumar",
+      Name: "Laptop",
+      PurchaseItem: "1",
+      Email: "35,000",
+      ContactNumber: "50,000",
+      Status: "5",
+      Created: "2024-01-10",
+    },
+    {
+      BuyerName:"Devendra Kumar",
+      Name: "Laptop",
+      PurchaseItem: "1",
+      Email: "35,000",
+      ContactNumber: "50,000",
+      Status: "5",
+      Created: "2024-01-10",
+    },
       
   ];
 
   return (
     <>
-      <div className="bg-[#fdfdfdda] rounded  px-3 pt-1 h-[248px]">
+      <div className="bg-[#fff] rounded  px-3 pt-1 h-[290px]">
         <h1 className="text-[18px] font-semibold mb-1">Product Transaction</h1>
         <Paper
           elevation={0}
@@ -74,8 +92,7 @@ const ProductTransaction = () => {
                 "& .MuiTableCell-stickyHeader": {
                   boxShadow: "none",
                   borderBottom: "none",
-                  background: "#009E9A",
-                  color: "#fff",
+                  background: "#F1F2F6", 
                   fontSize: "15px",
                   fontWeight: "600",
                 },
@@ -83,7 +100,7 @@ const ProductTransaction = () => {
             >
               <TableHead>
                 <TableRow
-                  sx={{ "& .MuiTableCell-root": { padding: "5px 10px" } }}
+                  sx={{ "& .MuiTableCell-root": { padding: "9px 10px" } }}
                 >
                   {columns?.map((column) => (
                     <TableCell
@@ -98,7 +115,7 @@ const ProductTransaction = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.slice(0, 4).map((row, index) => {
+                {rows.slice(0, 5).map((row, index) => {
                   return (
                     <TableRow
                       role="checkbox"
@@ -106,7 +123,7 @@ const ProductTransaction = () => {
                       key={index}
                       className={`${
                         index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F1F2F6]"
-                      }`}
+                      } truncate`}
                       sx={{
                         "& .MuiTableCell-root": { padding: "10.5px 10px" },
                       }}

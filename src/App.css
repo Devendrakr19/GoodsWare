@@ -3,7 +3,8 @@
 }  
 
 body{
-  background-color: #DBE2DC;
+  /* background-color: #DBE2DC; */
+  background-color: #f6f6f6;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }

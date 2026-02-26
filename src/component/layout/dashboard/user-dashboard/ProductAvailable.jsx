@@ -47,11 +47,33 @@ const ProductAvailable = () => {
       Status: "5",
       Created: "2024-01-10",
     },
+    {
+      Name: "Laptop",
+      Email: "35,000",
+      ContactNumber: "50,000",
+      Status: "5",
+      Created: "2024-01-10",
+    },
+    {
+      Name: "Laptop",
+      Email: "35,000",
+      ContactNumber: "50,000",
+      Status: "5",
+      Created: "2024-01-10",
+    },
+    {
+      Name: "Laptop",
+      Email: "35,000",
+      ContactNumber: "50,000",
+      Status: "5",
+      Created: "2024-01-10",
+    },
   ];
 
   return (
-    <div className="bg-[#fdfdfdda] rounded  px-3 pt-1 h-[248px]">
-      <h1 className="text-[18px] font-semibold mb-1">Available Product</h1>
+    <div className="bg-[#ffffff] rounded  px-3 pt-1 h-[290px]">
+      <h1 className="text-[18px] font-semibold mb-1">Top Customers</h1>
+      {/* <h1 className="text-[18px] font-semibold mb-1">Available Product</h1> */}
       <Paper
         elevation={0}
         sx={{ width: "100%", boxShadow: "none", overflow: "hidden" }}
@@ -64,8 +86,7 @@ const ProductAvailable = () => {
               "& .MuiTableCell-stickyHeader": {
                 boxShadow: "none",
                 borderBottom: "none",
-                background: "#009E9A",
-                color: "#fff",
+                background: "#F1F2F6", 
                 fontSize: "15px",
                 fontWeight: "600",
               },
@@ -73,7 +94,7 @@ const ProductAvailable = () => {
           >
             <TableHead>
               <TableRow
-                sx={{ "& .MuiTableCell-root": { padding: "5px 10px" } }}
+                sx={{ "& .MuiTableCell-root": { padding: "9px 10px" } }}
               >
                 {columns?.map((column) => (
                   <TableCell
@@ -88,7 +109,7 @@ const ProductAvailable = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.slice(0, 4).map((row, index) => {
+              {rows.slice(0, 5).map((row, index) => {
                 return (
                   <TableRow
                     role="checkbox"

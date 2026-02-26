@@ -18,7 +18,7 @@ const data = [
 
 const ProductOverview = () => {
 return (
-    <div className="bg-[#fdfdfdda] rounded px-2 pt-1 overflow-hidden">
+    <div className="bg-[#fff] rounded px-2 pt-1 overflow-hidden">
     <h1 className='text-[18px] font-semibold mb-1'>Product Overview</h1>
     <ResponsiveContainer width="100%" height={232} className="-ml-4">
       <BarChart data={data}
@@ -32,9 +32,9 @@ return (
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
+        <Bar dataKey="totalItem" fill="#7C3AED" radius={[2, 2, 0, 0]}/>
         <Bar dataKey="stockIn" fill="#16A34A" radius={[2, 2, 0, 0]}/>
         <Bar dataKey="stockOut" fill="#DC2626" radius={[2, 2, 0, 0]}/>
-        <Bar dataKey="totalItem" fill="#7C3AED" radius={[2, 2, 0, 0]}/>
       </BarChart>
     </ResponsiveContainer>
     </div>
