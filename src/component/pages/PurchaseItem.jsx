@@ -29,12 +29,12 @@ const PurchaseItem = () => {
     setProduct(event.target.value);
   };
 
-  const columns = [ 
+  const columns = [
     { id: "brandName", label: "Brand Name", minWidth: 150 },
-    { id: "itemName", label: "Item Name", minWidth: 150 }, 
+    { id: "itemName", label: "Item Name", minWidth: 150 },
     { id: "unitPrice", label: "Cost Price", minWidth: 70 },
     { id: "unitSellingPrice", label: "Selling Price", minWidth: 70 },
-    { id: "TotalItem", label: "Available Item", minWidth: 70 }, 
+    { id: "TotalItem", label: "Available Item", minWidth: 70 },
     { id: "StockOut", label: "Sold Item", minWidth: 70 },
     { id: "Status", label: "Status", minWidth: 70 },
     { id: "Created", label: "Added", minWidth: 70 },
@@ -53,7 +53,6 @@ const PurchaseItem = () => {
   const handleViewItem = () => {
     setViewItem(true);
   };
- 
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -237,23 +236,28 @@ const PurchaseItem = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex justify-between items-center mb-2 px-[20px]">
         <div className="flex items-center gap-3">
-          <div className="flex items-center bg-[#fdfdfd] rounded border-[1px] border-[#3357657d]">
+          <div className="flex items-center bg-[#fdfdfd] rounded-full border-[1px] border-[#3357657d]">
             <input
               type="text"
               placeholder="Search..."
-              className="outline-none px-2 py-1.5 w-[300px]"
+              className="outline-none px-5 py-1.5 w-[300px]"
             />
-            <IoSearchOutline className="text-[20px] mr-1.5" />
+            <IoSearchOutline className="text-[20px] mr-3" />
           </div>
           <Select
             labelId="demo-select-small-label"
             id="demo-select-small"
-            value={product} 
+            value={product}
             size="small"
             onChange={handleChange}
-            sx={{"& .MuiSelect-select":{padding:"7.5px",}, minWidth:"120px", background:"white"}}
+            sx={{
+              "& .MuiSelect-select": { padding: "7.5px 20px" },
+              minWidth: "120px",
+              background: "white",
+              borderRadius: "30px",
+            }}
           >
             <MenuItem value="all">All</MenuItem>
             <MenuItem value="mobile">Electronics</MenuItem>
@@ -266,11 +270,75 @@ const PurchaseItem = () => {
             <MenuItem value="microwave">Furniture</MenuItem>
           </Select>
         </div>
-        <button className="fill_btn" onClick={handleAddItem}>
+        <button className="fill_btn !rounded-full" onClick={handleAddItem}>
           Add Item
         </button>
       </div>
-      <Paper
+      <div className="flex items-center flex-wrap gap-[15px] px-[20px] mt-[15px] mb-[15px] h-[calc(100vh-150px)] overflow-auto">
+        {rows.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="bg-[white] rounded-[15px] px-[20px] py-[15px] w-[358px] card_shadow"
+            >
+              <div className="flex items-center justify-between">
+                <h1 className="text-[18px] text-[#171717] font-medium">
+                  {item?.itemName}
+                </h1>
+                {item?.Status === "Available" && (
+                  <span className="bg-[#E8F5E9] text-[#2E7D32] rounded-full px-[10px] text-[13px]">
+                    {item?.Status}
+                  </span>
+                )}
+                {item?.Status === "Low Stock" && (
+                  <span className="bg-[#FFF3F0] text-[#EF6C00] rounded-full px-[10px] text-[13px]">
+                    {item?.Status}
+                  </span>
+                )}
+                {item?.Status === "Out of Stock" && (
+                  <span className="bg-[#FFEBEE] text-[#D32F2F] rounded-full px-[10px] text-[13px]">
+                    {item?.Status}
+                  </span>
+                )}
+              </div>
+              <div className="text-[#545252]">
+                Brand:{" "}
+                <span className="text-[black] font-medium">
+                  {item?.brandName}
+                </span>
+              </div>
+              <div className="flex items-center justify-between border-t-[1px] border-t-[#efeeee] pt-[8px] mt-[5px]">
+                <div className="">
+                  Cost{" "}
+                  <span className="text-[#2E7D32] font-bold ml-[10px]">
+                    ₹{item?.unitPrice}
+                  </span>
+                </div>
+                <div className="">
+                  Selling{" "}
+                  <span className="text-[#2E7D32] font-bold ml-[10px]">
+                    ₹{item?.unitSellingPrice}
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between py-[5px]">
+                <span>Available</span>
+                <span>{item?.StockIn}</span>
+              </div>
+              <div className="flex items-center justify-between pb-[5px]">
+                <span>Sold</span>
+                <span>{item?.StockOut}</span>
+              </div>
+              <div className="flex items-center gap-[5px] text-[14px] text-[#6c6969]">
+                <span>Created: </span>
+                <span>{item?.Created}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* <Paper
         elevation={0}
         sx={{ width: "100%", boxShadow: "none", overflow: "hidden" }}
       >
@@ -346,14 +414,7 @@ const PurchaseItem = () => {
                                   className="cursor-pointer text-[#0c8dc0]"
                                 >
                                   <MdOutlineModeEdit onClick={handleAddItem} />
-                                </Tooltip>
-                                {/* <Tooltip
-                                      title="Delete"
-                                      arrow
-                                      className="cursor-pointer hover:text-[#e61313]"
-                                    >
-                                      <MdDeleteOutline />
-                                    </Tooltip> */}
+                                </Tooltip> 
                               </div>
                             ) : (
                               <Tooltip title={value} arrow>
@@ -379,7 +440,7 @@ const PurchaseItem = () => {
           onRowsPerPageChange={handleChangeRowsPerPage}
           sx={{ backgroundColor: "#F1F2F6" }}
         />
-      </Paper>
+      </Paper> */}
       <AddItem open={addItemPopup} onClose={handleCloseItem} />
       <ViewItem open={viewItem} onClose={handleCloseItem} />
     </>

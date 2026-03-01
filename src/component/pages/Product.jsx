@@ -1,37 +1,11 @@
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-  Tooltip,
-} from "@mui/material";
 import React, { useState } from "react";
-import { MdOutlineModeEdit, MdDeleteOutline } from "react-icons/md";
-import { LiaToggleOffSolid, LiaToggleOnSolid } from "react-icons/lia";
+import { MdDeleteOutline } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
-import { LuEye } from "react-icons/lu";
 import AddProduct from "../layout/product/AddProduct";
-
+import { FaPencilAlt } from "react-icons/fa";
+import { Tooltip } from "@mui/material";
 const Product = () => {
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
   const [addProductPopup, setAddProductPopup] = useState(false);
-
-  const columns = [
-    { id: "Product", label: "Product", minWidth: 170 },
-    // { id: "category", label: "Category", minWidth: 170 },
-    { id: "TotalItem", label: "Available Item", minWidth: 170 },
-    // { id: "StockIn", label: "Stock In", minWidth: 170 },
-    { id: "StockOut", label: "Item Sold", minWidth: 170 },
-    // { id: "CostPrice", label: "Cost Price", minWidth: 170 },
-    // { id: "Status", label: "Status", minWidth: 170 },
-    { id: "Created", label: "Created", minWidth: 170 },
-    { id: "Action", label: "Action", minWidth: 100 },
-  ];
 
   const handleAddProduct = () => {
     setAddProductPopup(true);
@@ -41,174 +15,123 @@ const Product = () => {
     setAddProductPopup(false);
   };
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-
   const rows = [
     {
-      Product: "Electronic",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: "20",
-      CostPrice: "50,000",
-      Created: "2024-01-10",
-    }, 
-    {
-      Product: "TextTile",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: 0,
-      CostPrice: "50,000",
+      Product: "Electronics",
+      StockIn: "500",
+      StockOut: "320",
       Created: "2024-01-10",
     },
     {
-      Product: "Fetilizer",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: "20",
-      CostPrice: "50,000",
-      Created: "2024-01-10",
+      Product: "Groceries",
+      StockIn: "1200",
+      StockOut: "980",
+      Created: "2024-02-15",
     },
     {
-      Product: "Cement",
-      TotalItem: "50",
-      StockIn: "30",
-      StockOut: "20",
-      CostPrice: "50,000",
-      Created: "2024-01-10",
-    }, 
+      Product: "Furniture",
+      StockIn: "150",
+      StockOut: "90",
+      Created: "2024-03-05",
+    },
+    {
+      Product: "Clothing",
+      StockIn: "800",
+      StockOut: "600",
+      Created: "2024-01-22",
+    },
+    {
+      Product: "Stationery",
+      StockIn: "400",
+      StockOut: "250",
+      Created: "2024-04-12",
+    },
+    {
+      Product: "Hardware",
+      StockIn: "300",
+      StockOut: "180",
+      Created: "2024-02-28",
+    },
+    {
+      Product: "Automobile Parts",
+      StockIn: "220",
+      StockOut: "140",
+      Created: "2024-03-18",
+    },
+    {
+      Product: "Pharmaceutical",
+      StockIn: "950",
+      StockOut: "720",
+      Created: "2024-01-30",
+    },
+    {
+      Product: "Sports Equipment",
+      StockIn: "275",
+      StockOut: "150",
+      Created: "2024-04-05",
+    },
   ];
 
   return (
     <>
-      <div className="flex justify-between items-center mb-2">
-        <div className="flex items-center bg-[#fdfdfd] rounded border-[1px] border-[#3357657d]">
+      <div className="flex justify-between items-center mb-2 px-[20px]">
+        <div className="flex items-center bg-[#fdfdfd] rounded-full border-[1px] border-[#3357657d]">
           <input
             type="text"
             placeholder="Search..."
-            className="outline-none px-2 py-1.5 w-[300px]"
+            className="outline-none px-5 py-1.5 w-[300px]"
           />
-          <IoSearchOutline className="text-[20px] mr-1.5"/>
+          <IoSearchOutline className="text-[20px] mr-3" />
         </div>
-        <button className="fill_btn" onClick={handleAddProduct}>
+        <button className="fill_btn !rounded-full" onClick={handleAddProduct}>
           Add Product
         </button>
       </div>
-      <Paper
-        elevation={0}
-        sx={{ width: "100%", boxShadow: "none", overflow: "hidden" }}
-      >
-        <TableContainer sx={{ height: 540, boxShadow: "none" }}>
-          <Table
-            stickyHeader
-            aria-label="sticky table"
-            sx={{
-              "& .MuiTableCell-stickyHeader": {
-                boxShadow: "none",
-                borderBottom: "none",
-                background: "#009E9A",
-                color: "#fff",
-                fontSize: "15px",
-                fontWeight: "600",
-              },
-            }}
+      <div className="flex items-center flex-wrap gap-[15px] px-[20px] mt-[15px]">
+        {rows.map((item, index) => (
+          <div
+            className="bg-[white] rounded-[15px] px-[20px] py-[15px] w-[362px] card_shadow"
+            key={index}
           >
-            <TableHead>
-              <TableRow
-                sx={{ "& .MuiTableCell-root": { padding: "14px 15px" } }}
-              >
-                {columns?.map((column) => (
-                  <TableCell
-                    key={column.id}
-                    align={column.align}
-                    style={{ minWidth: column.minWidth }}
-                  >
-                    {column.label}
-                  </TableCell>
-                ))}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  return (
-                    <TableRow
-                      hover
-                      role="checkbox"
-                      tabIndex={-1}
-                      key={index}
-                      className={`${
-                        index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F1F2F6]"
-                      }`}
-                      sx={{
-                        "& .MuiTableCell-root": { padding: "14.4px 15px" },
-                      }}
-                    >
-                      {columns.map((column) => {
-                        const value = row[column.id];
-                        return (
-                          <TableCell
-                            key={column.id}
-                            align={column.align}
-                            sx={{ borderBottom: "none" }}
-                          >
-                            {column.id === "Action" ? (
-                              <div className="flex items-center gap-3 text-[20px]">
-                                {/* <Tooltip
-                                  title="View"
-                                  arrow
-                                  className="cursor-pointer hover:text-[green]"
-                                >
-                                  <LuEye />
-                                </Tooltip> */}
-                                <Tooltip
-                                  title="Edit"
-                                  arrow
-                                  className="cursor-pointer text-[#0c8dc0]"
-                                >
-                                  <MdOutlineModeEdit onClick={handleAddProduct} />
-                                </Tooltip>
-                                <Tooltip
-                                  title="Delete"
-                                  arrow
-                                  className="cursor-pointer text-[#e61313]"
-                                >
-                                  <MdDeleteOutline />
-                                </Tooltip>
-                              </div>
-                            ) : (
-                              <Tooltip title={value} arrow>
-                                {value ?? "N/A"}
-                              </Tooltip>
-                            )}
-                          </TableCell>
-                        );
-                      })}
-                    </TableRow>
-                  );
-                })}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-          sx={{ backgroundColor: "#F1F2F6" }}
-        />
-      </Paper>
-      <AddProduct open={addProductPopup} onClose={handleCloseProduct}/>
+            <h1 className="text-[18px] text-[#171717] font-medium">
+              {item?.Product}
+            </h1>
+            <div className="flex items-center px-[2px] py-[4px]">
+              <div className="flex flex-col w-[50%]">
+                <span className="text-[#545353]">Available Item</span>
+                <span className="text-[18px] font-medium">{item?.StockIn}</span>
+              </div>
+              <span className="w-[1px] h-[40px] block bg-[#dfdede]"></span>
+              <div className="flex flex-col pl-[30px]">
+                <span className="text-[#545353]">Item sold</span>
+                <span className="text-[18px] font-medium">
+                  {item?.StockOut}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between border-t-[1px] border-t-[#efeeee] pt-[8px]">
+              <div className="flex items-center gap-[5px] text-[14px] text-[#6c6969]">
+                <span>Created:</span>
+                <span>{item?.Created}</span>
+              </div>
+              <div className="flex items-center gap-[6px]">
+                <Tooltip title="Edit" arrow>
+                  <span className="bg-[#efefef] p-1.5 rounded text-[14px] cursor-pointer text-[#104ccd] hover:bg-[#104ccd] hover:text-[white] transition delay-150">
+                    <FaPencilAlt onClick={handleAddProduct} />
+                  </span>
+                </Tooltip>
+                <Tooltip title="Delete" arrow>
+                  <span className="bg-[#efefef] p-1 rounded text-[18px] cursor-pointer text-[#e61313] hover:bg-[#e61313] hover:text-[white] transition delay-150">
+                    <MdDeleteOutline />
+                  </span>
+                </Tooltip>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <AddProduct open={addProductPopup} onClose={handleCloseProduct} />
     </>
   );
 };

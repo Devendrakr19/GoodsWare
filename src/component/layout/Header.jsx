@@ -1,21 +1,17 @@
 import React from "react";
 import { RxDashboard } from "react-icons/rx";
 import { NavLink, useNavigate } from "react-router-dom";
-import { MdProductionQuantityLimits } from "react-icons/md";
-// import { TbReportAnalytics } from "react-icons/tb";
-// import { BiUser } from "react-icons/bi";
-// import { MdOutlineLogout } from "react-icons/md";
-// import { useSelector } from "react-redux";
+import { MdProductionQuantityLimits } from "react-icons/md"; 
+// import { BiUser } from "react-icons/bi"; 
 import { PiBoxArrowDown, PiBoxArrowUp } from "react-icons/pi";
-import { MdStorefront } from "react-icons/md";
-// import { GiHamburgerMenu } from "react-icons/gi";
+import { MdStorefront } from "react-icons/md"; 
 import { FaRegCircleUser } from "react-icons/fa6";
 const Header = () => {
  const navigate = useNavigate(); 
 
   const sidebarData = [
     { key: 1, title: "Dashboard", url: "/dashboard", icon: <RxDashboard /> },
-    { key:7, title: "Suppliers", url: "/scan-item", icon: <PiBoxArrowUp /> },
+    { key:7, title: "Suppliers", url: "", icon: <PiBoxArrowUp /> },
     // { key:2, title: "Users", url: "/user", icon: <BiUser /> },
     {
       key: 3,

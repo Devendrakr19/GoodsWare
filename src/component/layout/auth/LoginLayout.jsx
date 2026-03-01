@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const LoginLayout = () => {
   return (
     <>
-      <Grid container className="bg-[#00cec4] relative">
+      <Grid container className="bg-[#4c5252] relative">
         {Array(288)
           .fill()
           .map((item, index) => (
