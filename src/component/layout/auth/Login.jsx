@@ -30,7 +30,7 @@ const Login = () => {
   //  console.log("emmil", formik.email)
   return (
     <>
-      <form onSubmit={formik.handleSubmit} className="flex flex-col p-5">
+      <form onSubmit={formik.handleSubmit} className="flex flex-col p-5 bg-[white] rounded">
         <h1 className="text-[20px] font-semibold text-center">Login</h1>
         <div className="">
           <label htmlFor="email">
